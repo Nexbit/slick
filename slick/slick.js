@@ -27,7 +27,7 @@
 
 }(function($) {
     'use strict';
-    var Slick = window.Slick || {};
+    var Slick = window.nxSlick || {};
 
     Slick = (function() {
 
@@ -3005,7 +3005,7 @@
 
     };
 
-    $.fn.slick = function() {
+    $.fn.nxSlick = function() {
         var _ = this,
             opt = arguments[0],
             args = Array.prototype.slice.call(arguments, 1),
