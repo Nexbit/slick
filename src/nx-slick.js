@@ -6,13 +6,13 @@
 |___/_|_|\___|_|\_(_)/ |___/
                    |__/
 
- Version: 1.8.1
-  Author: Ken Wheeler
+ Version: 1.8.99
+  Author: Ken Wheeler (repackaged by Paolo Furini)
  Website: http://kenwheeler.github.io
     Docs: http://kenwheeler.github.io/slick
-    Repo: http://github.com/kenwheeler/slick
-  Issues: http://github.com/kenwheeler/slick/issues
-
+    Repo: https://github.com/Nexbit/slick
+  Issues: https://github.com/Nexbit/slick/issues
+@license  MIT
  */
 /* global window, document, define, jQuery, setInterval, clearInterval */
 ;(function(factory) {

@@ -1,11 +1,11 @@
 {
   "name": "slick-carousel",
-  "version": "1.8.1",
+  "version": "1.8.99",
   "description": "the last carousel you'll ever need",
-  "main": "slick/slick.js",
+  "main": "dist/nx-slick.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kenwheeler/slick.git"
+    "url": "https://github.com/nexbit/slick"
   },
   "keywords": [
     "carousel",
@@ -14,7 +14,7 @@
     "js",
     "slider"
   ],
-  "author": "Ken Wheeler <ken_wheeler@me.com>",
+  "author": "Ken Wheeler, Paolo Furini",
   "contributors": [
     {
       "name": "ken wheeler",
@@ -38,13 +38,38 @@
     {
       "name": "ashley mcknight",
       "email": "ash@sharpteef.net"
+    },
+    {
+      "name": "nexbit"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kenwheeler/slick/issues"
+    "url": "https://github.com/nexbit/slick/issues"
+  },
+  "scripts": {
+    "build-task:sass:scss-compile": "node-sass-chokidar --source-map true src/scss/ -o dist/css",
+    "build-task:sass:autoprefixer": "postcss dist/css/*.css --use autoprefixer -d dist/css",
+    "build-task:res:copyfiles": "copyfiles -f \"src/img/**/*\" dist/img && copyfiles -f \"src/scss/fonts/*\" dist/css/fonts",
+    "build-task:js:uglifyjs": "uglifyjs --compress --mangle --comments --safari10 --source-map includeSources -o dist/nx-slick.min.js -- \"src/nx-slick.js\"",
+    "sass:build": "npm-run-all -p build-task:sass:*",
+    "sass:watch": "chokidar 'src/scss/**/*.scss' -c 'npm run sass:build'",
+    "res:build": "npm-run-all -p build-task:res:*",
+    "js:build": "npm-run-all -p build-task:js:*",
+    "js:watch": "chokidar 'src/**/*.js' -c 'npm run js:build'",
+    "dev": "npm-run-all -p sass:* js:*",
+    "build": "npm-run-all -p *:build"
   },
   "peerDependencies": {
     "jquery": ">=1.8.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "chokidar-cli": "^1.2.0",
+    "copyfiles": "^2.0.0",
+    "node-sass-chokidar": "^1.2.2",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0",
+    "uglify-es": "^3.3.9"
   }
 }
