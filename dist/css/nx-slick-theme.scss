@@ -41,8 +41,8 @@ $slick-opacity-not-active: 0.25 !default;
 
 /* Slider */
 
-.slick-list {
-    .slick-loading & {
+.nx-slick-list {
+    .nx-slick-loading & {
         background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
     }
 }
@@ -60,8 +60,8 @@ $slick-opacity-not-active: 0.25 !default;
 
 /* Arrows */
 
-.slick-prev,
-.slick-next {
+.nx-slick-prev,
+.nx-slick-next {
     position: absolute;
     display: block;
     height: 20px;
@@ -86,7 +86,7 @@ $slick-opacity-not-active: 0.25 !default;
             opacity: $slick-opacity-on-hover;
         }
     }
-    &.slick-disabled:before {
+    &.nx-slick-disabled:before {
         opacity: $slick-opacity-not-active;
     }
     &:before {
@@ -100,7 +100,7 @@ $slick-opacity-not-active: 0.25 !default;
     }
 }
 
-.slick-prev {
+.nx-slick-prev {
     left: -25px;
     [dir="rtl"] & {
         left: auto;
@@ -114,7 +114,7 @@ $slick-opacity-not-active: 0.25 !default;
     }
 }
 
-.slick-next {
+.nx-slick-next {
     right: -25px;
     [dir="rtl"] & {
         left: -25px;
@@ -130,11 +130,11 @@ $slick-opacity-not-active: 0.25 !default;
 
 /* Dots */
 
-.slick-dotted.slick-slider {
+.nx-slick-dotted.nx-slick-slider {
     margin-bottom: 30px;
 }
 
-.slick-dots {
+.nx-slick-dots {
     position: absolute;
     bottom: -25px;
     list-style: none;
@@ -186,7 +186,7 @@ $slick-opacity-not-active: 0.25 !default;
                 -moz-osx-font-smoothing: grayscale;
             }
         }
-        &.slick-active button:before {
+        &.nx-slick-active button:before {
             color: $slick-dot-color-active;
             opacity: $slick-opacity-default;
         }

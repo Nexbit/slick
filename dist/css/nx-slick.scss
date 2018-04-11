@@ -2,7 +2,7 @@
  * Slider base styles
  */
 
-.slick-slider {
+.nx-slick-slider {
     -webkit-touch-callout: none;
     position: relative;
     display: block;
@@ -16,7 +16,7 @@
         touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
 }
-.slick-list {
+.nx-slick-list {
     position: relative;
     overflow: hidden;
     display: block;
@@ -32,13 +32,13 @@
         cursor: hand;
     }
 }
-.slick-slider .slick-track,
-.slick-slider .slick-list {
+.nx-slick-slider .nx-slick-track,
+.nx-slick-slider .nx-slick-list {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
 }
 
-.slick-track {
+.nx-slick-track {
     position: relative;
     left: 0;
     top: 0;
@@ -56,11 +56,11 @@
         clear: both;
     }
 
-    .slick-loading & {
+    .nx-slick-loading & {
         visibility: hidden;
     }
 }
-.slick-slide {
+.nx-slick-slide {
     float: left;
     height: 100%;
     min-height: 1px;
@@ -70,7 +70,7 @@
     img {
         display: block;
     }
-    &.slick-loading img {
+    &.nx-slick-loading img {
         display: none;
     }
 
@@ -80,20 +80,20 @@
         pointer-events: none;
     }
 
-    .slick-initialized & {
+    .nx-slick-initialized & {
         display: block;
     }
 
-    .slick-loading & {
+    .nx-slick-loading & {
         visibility: hidden;
     }
 
-    .slick-vertical & {
+    .nx-slick-vertical & {
         display: block;
         height: auto;
         border: 1px solid transparent;
     }
 }
-.slick-arrow.slick-hidden {
+.nx-slick-arrow.nx-slick-hidden {
     display: none;
 }
