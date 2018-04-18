@@ -1043,8 +1043,6 @@
                 'blur.slick',
                 '*',
                 function() {
-                    var $sf = $(this);
-
                     // When a blur occurs on any elements within the slider we become unfocused
                     if( _.options.pauseOnFocus ) {
                         _.focussed = false;
